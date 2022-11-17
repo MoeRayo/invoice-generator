@@ -10,6 +10,22 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  {
+    path: '/signin',
+    name: 'signin',
+    component: () => import(/* webpackChunkName: "sigin" */ '../views/SigninView.vue')
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: () => import(/* webpackChunkName: "sigin" */ '../views/SignupView.vue')
+  },
+  {
+    path: "/dashboard/:id",
+    name: "dashboard",
+    component: () =>
+      import(/* webpackChunkName: "dashboard" */ "../views/DashboardView.vue"),
+  },
 ]
 
 const router = new VueRouter({
