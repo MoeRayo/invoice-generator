@@ -1,5 +1,5 @@
 <template>
-  <div class="bb b--white-30 ph4 pv3 bg-dark-blue">
+  <div class="bb b--white-30 ph4 pv3 bg-dark-blue" v-if="$route.name !== 'dashboard'">
    <section class="w-100-sm w-80-m w-70-l center flex justify-between">
     <a class="link black no-underline flex items-center" href="/">
       <h1 class="mt2 mb0 fw1 f2 white hover-light-blue">Invoice Generator</h1>
