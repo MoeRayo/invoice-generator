@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "inputdata": "",
+    "formdata": "Invoice From",
+    "type": "text",
+    "otherdata": "invoicefrom"
+  },
+  {
+    "id": 2,
+    "inputdata": "",
+    "formdata": "Invoice To",
+    "type": "text",
+    "otherdata": "invoiceto"
+  },
+  {
+    "id": 3,
+    "inputdata": "",
+    "formdata": "Date",
+    "type": "date",
+    "otherdata": "date"
+  },
+  {
+    "id": 4,
+    "inputdata": "",
+    "formdata": "Invoice Number",
+    "type": "number",
+    "otherdata": "invoicenumber"
+  },
+  {
+    "id": 5,
+    "inputdata": "",
+    "formdata": "Total",
+    "type": "number",
+    "otherdata": "total"
+  },
+  {
+    "id": 6,
+    "inputdata": "",
+    "formdata": "Bank Name",
+    "otherdata": "bankname"
+  },
+  {
+    "id": 7,
+    "inputdata": "",
+    "formdata": "Account Number",
+    "type": "number",
+    "otherdata": "accountnumber"
+  },
+  {
+    "id": 8,
+    "inputdata": "",
+    "formdata": "Sub Total",
+    "type": "number",
+    "otherdata": "subtotal"
+  },
+  {
+    "id": 9,
+    "inputdata": "",
+    "formdata": "Tax",
+    "type": "number",
+    "otherdata": "tax"
+  }
+]
+
