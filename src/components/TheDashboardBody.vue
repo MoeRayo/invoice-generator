@@ -16,12 +16,19 @@
         <textarea name="notes" id="notes" class="db mb3 w-90 br2 pa2 ba bw1 b--black bg-black-05"></textarea>
       </div>
       
+      <div class="dn" v-if="showTemplate">
+          <TheInvoiceTemplate :userData="basicDataInfo" ref="ref" />
+        </div>
+
       <div class="w-100">
-          <button type="submit" class="f6 ttu tracked black-80 bg-black pa3 br3 white bb link b--black hover-black hover-bg-gold bg-animate pointer">Create Resume</button>
+          <button type="submit" class="f6 ttu tracked black-80 bg-black pa3 br3 white bb link b--black hover-black hover-bg-gold bg-animate pointer">Create Invoice</button>
         </div>
     </form>
     
-    
+   </div>
+
+   <div class="bg-white w-30 br3 pa3">
+     <iframe :src="iframeSRC ? iframeSRC : initialSRC" width="100%" height="100%" />
    </div>
   </div>
  </template>
@@ -30,25 +37,42 @@
  import TheDashboardInput from "@/components/TheDashboardInput.vue";
  import itemsData from "../../util/items-form-data.json";
  import basicData from "../../util/basic-form-data.json";
+ import TheInvoiceTemplate from "@/components/TheInvoiceTemplate.vue";
 
  export default {
    components: {
-     TheDashboardInput,
+    TheDashboardInput,
+    TheInvoiceTemplate,
+
    },
    data: ()=>({
     basicData,
     itemsData,
     basicDataInfo: {},
-    itemInfo: {}
+    itemInfo: {},
+    iframeSRC: '',
+    initialSRC: 'https://res.cloudinary.com/moerayo/image/upload/v1668796250/Invoices.pdf',
+    showTemplate: false,
+
    }),
    methods: {
     generateInvoice() {
       this.generateBasicDataInfo()
       this.generateItemInfo()
+      if(!this.basicDataInfo.invoicefrom){
+         this.showTemplate = false
+       } else {
+         this.showTemplate = true
+         this.$nextTick(() => {
+          this.iframeSRC = this.$refs.ref.$refs.ref.$el.src
+         });
+       }
+       console.log(this.basicDataInfo.invoicefrom)
     },
     generateBasicDataInfo() {
       let newBasicData = basicData.map(({otherdata,inputdata })=> ({[otherdata]:inputdata}))
       this.basicDataInfo = Object.assign({}, ...newBasicData)
+      // console.log(this.basicDataInfo)
     },
     generateItemInfo(){
       let newItemData = itemsData.map(({otherdata,inputdata })=> ({[otherdata]:inputdata}))
