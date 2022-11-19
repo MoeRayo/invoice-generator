@@ -17,7 +17,7 @@
       </div>
       
       <div class="dn" v-if="showTemplate">
-          <TheInvoiceTemplate :userData="basicDataInfo" ref="ref" />
+          <TheInvoiceTemplate :basicDataInfo="basicDataInfo" :itemInfo="itemInfo" ref="ref" />
         </div>
 
       <div class="w-100">
@@ -51,7 +51,7 @@
     basicDataInfo: {},
     itemInfo: {},
     iframeSRC: '',
-    initialSRC: 'https://res.cloudinary.com/moerayo/image/upload/v1668796250/Invoices.pdf',
+    initialSRC: 'https://res.cloudinary.com/moerayo/image/upload/v1668804317/Invoicing.pdf',
     showTemplate: false,
 
    }),
