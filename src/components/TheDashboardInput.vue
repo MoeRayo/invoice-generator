@@ -15,17 +15,6 @@
  
 <script>
 export default {
-  data: () => ({
-  }),
-  // props: {
-  //   inputData: {
-  //     type: Object
-  //   },
-  //   formData: {
-  //     type: Object
-  //   }
-  // }
-
   props: ["inputData", "formData", "type", "otherData"]
 }
 </script>

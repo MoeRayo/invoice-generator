@@ -17,7 +17,7 @@ const DatabaseClient = buildClient();
 const defaultOptions = {
   databaseURL:
     "https://Olufunke-Moronfolu-s-workspace-vj48pf.us-east-1.xata.sh/db/invoice-generator",
-  apiKey: "xau_WAMw8evIhRbrATj5QNZqERFdUuQgdHQv6"
+  apiKey: "add your api key here"
 
 };
 /** @typedef { import('./types').DatabaseSchema } DatabaseSchema */
