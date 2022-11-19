@@ -1,6 +1,6 @@
 <template>
   <div>
-    <cld-image publicId="Invoicing.pdf" ref="ref" >
+    <cld-image publicId="invoiced.pdf" ref="ref" >
       <cld-transformation flags="rasterize" />
       <cld-transformation :overlay="{fontFamily: 'Poppins', fontSize: 60, text: basicDataInfo.invoicefrom,  fontWeight: 'bold'}" color="#023982" gravity="west" x="130" y="-670"/>
 
